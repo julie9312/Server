@@ -10,18 +10,18 @@ let connection = mysql.createConnection(
     }
 );
 // 셔츠 데이터를 맨처음부터 20개만 조회하여, article과 color 를 출력하시오.
-let query = 'select article, color from shirts limit 20;'
+let query = 'select * from memo'
 
-// connection.query(query, function(error, results, fields){
-//     // console.log(results)
+connection.query(query, function(error, results, fields){
+    console.log(results)
 
-//     console.log(results.length)
+    // console.log(results.length)
 
-//     for(let i = 0; i < results.length; i++){
-//         console.log(results[i].article)
-//     }
+    // for(let i = 0; i < results.length; i++){
+    //     console.log(results[i].article)
+    // }
 
-// })
+})
 
 
 // query = 'insert into shirts (article, shirt_size, color, last_worn) \
@@ -93,8 +93,6 @@ connection.query(query, function(error, results, fields){
 })
 
 connection.end()
-
-//헤옴
 
 
 
