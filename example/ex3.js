@@ -9,7 +9,7 @@ let connection = mysql.createConnection(
     }
 );
 
-let query = 'select * from books limit 20;'
+let query = 'select concat(author_fname, author_lname)as "full_name" from books;'
 
 connection.query(query, function(error, results, fields){
     // console.log(results)
@@ -20,13 +20,6 @@ connection.query(query, function(error, results, fields){
 
 
 connection.end()
-
-// let query = 'select concat(author_fname, author_lname)as "full_name" from books;'
-// connection.query(query, function(error, results, fields){
-//  console.log(results)
-
-//  })
-// connection.end()
 
 
 // query = 'select concat(author_fname, author_lname)as "full_name" from books;'
